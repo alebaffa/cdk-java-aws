@@ -4,13 +4,11 @@ import software.amazon.awscdk.core.App;
 import software.amazon.awscdk.core.Environment;
 import software.amazon.awscdk.core.StackProps;
 
-import java.util.Arrays;
-
-public class CdkHelloWorldApp {
+public class CDKApp {
     public static void main(final String[] args) {
         App app = new App();
 
-        new CdkHelloWorldStack(app, "CdkHelloWorldStack", StackProps.builder()
+        new CDKStack(app, "CDKStack", StackProps.builder()
                 // If you don't specify 'env', this stack will be environment-agnostic.
                 // Account/Region-dependent features and context lookups will not work,
                 // but a single synthesized template can be deployed anywhere.
@@ -26,14 +24,12 @@ public class CdkHelloWorldApp {
 
                 // Uncomment the next block if you know exactly what Account and Region you
                 // want to deploy the stack to.
-                /*
-                .env(Environment.builder()
-                        .account("123456789012")
-                        .region("us-east-1")
-                        .build())
-                */
 
-                // For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html
+                .env(Environment.builder()
+                        .account("your-account-id")
+                        .region("aws-region-name")
+                        .build())
+
                 .build());
 
         app.synth();

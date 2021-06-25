@@ -30,7 +30,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.0.0</version>
                 <configuration>
-                    <mainClass>com.myorg.CdkHelloWorldApp</mainClass>
+                    <mainClass>com.myorg.CDKApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>
@@ -47,11 +47,6 @@
             <groupId>software.amazon.awscdk</groupId>
             <artifactId>ec2</artifactId>
             <version>${cdk.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.amazonaws</groupId>
-            <artifactId>aws-java-sdk-ec2</artifactId>
-            <version>1.11.245</version>
         </dependency>
         <dependency>
           <groupId>org.junit.jupiter</groupId>
